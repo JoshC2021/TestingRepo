@@ -14,11 +14,11 @@ namespace DecisionMaking
 
             if (true)
             {
-                Console.WriteLine("Break Main");
+                Console.WriteLine("Hello friendo!");
             }
 
 
-            Console.WriteLine("Hello friendo! What's your name?");
+            Console.WriteLine(" What's your name?");
 
             if (true)
             {
