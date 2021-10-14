@@ -12,9 +12,19 @@ namespace DecisionMaking
         public static void Main(string[] args)
         {
 
+            if (true)
+            {
+                Console.WriteLine("Break Main");
+            }
 
 
             Console.WriteLine("Hello friendo! What's your name?");
+
+            if (true)
+            {
+                Console.WriteLine("Break Main");
+            }
+
 
             string name = Console.ReadLine();
 
