@@ -5,6 +5,10 @@ namespace DecisionMaking
 {
     class MainClass
     {
+        public static void DestroyMain()
+        {
+            Console.WriteLine("End of your Repo");
+        }
         public static void Main(string[] args)
         {
 
