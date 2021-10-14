@@ -5,25 +5,53 @@ namespace DecisionMaking
 {
     class MainClass
     {
-        public static void DestroyMain()
+        public static int GetCategory()
         {
-            Console.WriteLine("End of your Repo");
+
+            int categoryNumber = -1;
+            bool needCategory = true;
+            while (needCategory)
+            {
+                Console.Write("Please enter the number of the category you are interested in: ");
+                string input = Console.ReadLine().ToLower().Trim();
+                try
+                {
+                    if (input.Any()) // checks to see if user entered anything
+                    {
+                        categoryNumber = int.Parse(input) - 1;
+                        if (categoryNumber >= 5 || categoryNumber < 0) // choice has to be within range
+                        {
+                            throw new Exception("No category in that range, please try again.");
+                        }
+                    }
+                    else
+                    {
+                        throw new Exception("No category detected, please try again.");
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Not a valid number, please try again");
+                    continue;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    continue;
+                }
+                needCategory = false;
+            }
+
+            return categoryNumber;
         }
+
         public static void Main(string[] args)
         {
 
-            if (true)
-            {
-                Console.WriteLine("Hello friendo!");
-            }
 
 
-            Console.WriteLine(" What's your name?");
+            Console.WriteLine("Hello friendo! What's your name?");
 
-            if (true)
-            {
-                Console.WriteLine("Break Main");
-            }
 
 
             string name = Console.ReadLine();
